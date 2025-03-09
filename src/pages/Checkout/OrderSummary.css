@@ -1,0 +1,192 @@
+/* 📌 ORDER SUMMARY CONTAINER */
+.order-summary {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 450px; /* Restrict max width */
+    font-family: "Poppins", sans-serif;
+    margin: auto;
+    overflow: hidden;  /* Ensures no extra width */
+    box-sizing: border-box; /* Prevents width issues */
+}
+
+/* 📌 ORDER SUMMARY TITLE */
+.order-title {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+    border-bottom: 2px solid #FFD700;
+    padding-bottom: 8px;
+}
+
+/* 📌 COUPON SECTION */
+.coupon-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap; /* Prevents items from overflowing */
+}
+
+.coupon-section input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    outline: none;
+    min-width: 0; /* Prevents stretching issues */
+}
+
+.apply-btn {
+    padding: 8px 12px;
+    background: #ffb400;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    white-space: nowrap; /* Prevents button from breaking */
+}
+
+.apply-btn:hover {
+    background: #e09c00;
+}
+
+/* 📌 ORDER ITEMS */
+.order-items {
+    margin-bottom: 20px;
+    overflow: hidden; /* Ensures no content spills out */
+}
+
+.order-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    flex-wrap: wrap; /* Prevents overflow */
+}
+
+.item-image {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.item-details {
+    flex: 1;
+    min-width: 0; /* Fixes text overflow */
+}
+
+.item-name {
+    font-size: 14px;
+    font-weight: bold;
+    color: #444;
+}
+
+.item-price {
+    font-size: 14px;
+    color: #333;
+}
+
+.note {
+    font-size: 12px;
+    color: #777;
+}
+
+/* 📌 SUMMARY TOTALS */
+.summary-totals p {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 8px;
+    flex-wrap: wrap; /* Prevents breaking */
+}
+
+.discount {
+    color: red;
+    font-weight: bold;
+}
+
+.total {
+    font-size: 18px;
+    color: green;
+    font-weight: bold;
+}
+
+/* 📌 PLACE ORDER BUTTON */
+.payment-button {
+    background-color: #ffb400;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.payment-button:hover {
+    background-color: #e09c00;
+    transform: scale(1.05);
+}
+
+/* 📱 RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .order-summary {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .order-title {
+        font-size: 18px;
+    }
+
+    .coupon-section {
+        flex-direction: column;
+    }
+
+    .apply-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .order-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .item-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .item-name, .item-price {
+        font-size: 13px;
+    }
+
+    .summary-totals p {
+        font-size: 13px;
+    }
+
+    .payment-button {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}

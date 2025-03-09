@@ -1,0 +1,215 @@
+/* 🎨 Checkout Form Layout */
+.checkout-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px;
+    width: 100%;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* 📌 Left Section (Address & Payment) */
+.checkout-left {
+    width: 100%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 📌 Right Section (Order Summary & Coupon) */
+.checkout-right {
+    width: 100%; /* Full width on smaller screens */
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Add spacing between sections on smaller screens */
+}
+
+/* 📌 Form Labels */
+.label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* 📌 Input Fields */
+.input-field {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.input-field:focus {
+    border-color: #8b5c3c;
+    outline: none;
+}
+
+/* 📌 Address Field - Bigger */
+.input-field[name="address"] {
+    height: 60px;
+    padding-right: 17px;
+}
+
+/* 📌 State & Pincode in One Row */
+.state-pincode-container {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+/* 📌 State Input */
+.input-field.state {
+    width: 100%; /* Full width on smaller screens */
+}
+
+/* 📌 Pincode Input */
+.input-field.pincode {
+    width: 100%; /* Full width on smaller screens */
+}
+
+/* 🎯 Continue to Shipping Button */
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.continue-btn {
+    margin-top: 20px;
+    padding: 14px 20px;
+    background: #8b5c3c;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    width: 100%; /* Full width on smaller screens */
+}
+
+.continue-btn:hover {
+    background: #6f4328;
+}
+
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.input-field.error {
+    border-color: red;
+}
+
+.submit-button {
+    background-color: #FFD700; /* Bright Yellow */
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-button:hover {
+    background-color: #FFC107; /* Slightly darker yellow */
+    transform: scale(1.05);
+}
+
+.submit-button:active {
+    background-color: #FFA000; /* Even darker yellow on click */
+    transform: scale(0.98);
+}
+
+.payment-button {
+    width: 100%; /* Full width on smaller screens */
+    max-width: 150px; /* Limit width on larger screens */
+    display: block;
+    margin: 15px auto; /* Center the button */
+    padding: 10px 15px;
+    font-size: 16px;
+    text-align: center;
+    background-color: yellow;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+/* 📌 Address Form */
+.address-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 📌 Media Queries for Responsiveness */
+@media (min-width: 768px) {
+    .checkout-container {
+        flex-wrap: nowrap; /* Prevent wrapping on larger screens */
+    }
+
+    .checkout-left {
+        width: 60%; /* Adjust width for larger screens */
+    }
+
+    .checkout-right {
+        width: 35%; /* Adjust width for larger screens */
+        margin-top: 0; /* Remove spacing between sections */
+    }
+
+    .state-pincode-container {
+        flex-wrap: nowrap; /* Prevent wrapping on larger screens */
+    }
+
+    .input-field.state {
+        width: 60%; /* Adjust width for larger screens */
+    }
+
+    .input-field.pincode {
+        width: 40%; /* Adjust width for larger screens */
+    }
+
+    .continue-btn {
+        width: fit-content; /* Auto width on larger screens */
+    }
+
+    .payment-button {
+        width: 150px; /* Fixed width on larger screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-section,
+    .address-section {
+        padding: 20px; /* Reduce padding on smaller screens */
+    }
+
+    .input-field[name="address"] {
+        height: 80px; /* Adjust height for smaller screens */
+    }
+
+    .state-pincode-container {
+        gap: 10px; /* Reduce gap on smaller screens */
+    }
+}

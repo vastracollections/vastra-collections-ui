@@ -1,0 +1,34 @@
+.place-order-container {
+    min-height: calc(100vh - 70px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Luxiachy";
+    font-size: 50px;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .place-order-container h2 {
+    margin: 0;
+    font-size: inherit;
+  }
+  
+  @media (max-width: 1200px) {
+    .place-order-container {
+      font-size: 40px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .place-order-container {
+      font-size: 30px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .place-order-container {
+      font-size: 24px;
+    }
+  }
