@@ -2,10 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom"; 
 import "./CheckoutForm.css";
 import OrderSummary from "./OrderSummary";
-import AddressForm from "./AddressForm";
 import PaymentOptions from "./PaymentOptions";
-import PaymentPage from "./PaymentPage";
-import PlaceOrder from "./PlaceOrder";
 import axios from "axios";
 import Header from "../../components/Header/Header";
 import Footers from "../../components/Footer/Footer";
@@ -114,9 +111,9 @@ const CheckoutForm = () => {
       "image": "https://example.com/your_logo",
       "order_id": order.razorpayOrderId, 
       "handler": function (response){
-          alert(response.razorpay_payment_id);
-          alert(response.razorpay_order_id);
-          alert(response.razorpay_signature)
+          // alert(response.razorpay_payment_id);
+          // alert(response.razorpay_order_id);
+          // alert(response.razorpay_signature)
       },
       "prefill": { 
           "name": "Gaurav Kumar", 
@@ -132,13 +129,14 @@ const CheckoutForm = () => {
   };
   var rzp1 = new window.Razorpay(options);
   rzp1.on('payment.failed', function (response){
-          alert(response.error.code);
-          alert(response.error.description);
-          alert(response.error.source);
-          alert(response.error.step);
+          // alert(response.error.code);
+          // alert(response.error.description);
+          // alert(response.error.source);
+          // alert(response.error.step);
           alert(response.error.reason);
-          alert(response.error.metadata.order_id);
-          alert(response.error.metadata.payment_id);
+          // alert(response.error.metadata.order_id);
+          // alert(response.error.metadata.payment_id);
+           navigate("/place-order", { state: { status: "false" } });
   });
 
   rzp1.open();
@@ -177,11 +175,11 @@ const CheckoutForm = () => {
     if (validateForm()) {
       if (paymentMethod === "COD") {
        await createOrder(paymentMethod);
-        navigate("/place-order");
+         navigate("/place-order", { state: { status: "true" } })
       } else {      
         await createOrder();
         await razorpay();
-        navigate("/place-order");
+        navigate("/place-order", { state: { status: "true" } })
       }
     }
   };
