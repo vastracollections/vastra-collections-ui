@@ -7,6 +7,7 @@ import "./App.css";
 import PaymentSuccess from "./pages/Payment/PaymentSuccess";
 import CheckoutForm from "./pages/Checkout/CheckoutForm";
 import PlaceOrder from "./pages/Checkout/PlaceOrder";
+import { Analytics } from "@vercel/analytics/react"
 //import PaymentOptions from "./pages/Checkout/PaymentOptions";
 
 
@@ -23,7 +24,9 @@ function App() {
         <Route  path="/place-order" element={<PlaceOrder />} />
        <Route path="/checkout" element={<CheckoutForm />} />
       </Routes>
+      <Analytics />
     </Router>
+    
   );
 }
 
