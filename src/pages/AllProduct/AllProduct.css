@@ -451,4 +451,35 @@ letter-spacing: 0%;
   .popular-products {
     grid-template-columns: repeat(1, 1fr);
   }
+
+    .filter-sort-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+.filter-sort-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align items to the left */
+  gap: 20px; /* Space between sort and filter */
+  padding: 10px;
+  flex-wrap: wrap; /* Ensures items move to the next line on small screens */
+  width: 100%;
+}
+
+.filter-sort-container select,
+.filter-sort-container label {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Space between checkbox and text */
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.filter-sort-container select {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: pointer;
 }
