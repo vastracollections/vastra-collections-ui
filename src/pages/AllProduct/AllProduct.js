@@ -105,9 +105,20 @@ const AllProductsPage = () => {
                   </span>
                 </p>
               </div>
-              <button className="addcart" onClick={() => handleAddToCart(product)}>
-                Add to Cart
-              </button>
+             {product.quantitiesAvailable > 0 ? (
+  <button
+    className="addcart"
+    onClick={(e) => {
+      e.stopPropagation(); // Prevent parent div click event
+      handleAddToCart(product);
+    }}
+  >
+    Add to Cart
+  </button>
+) : (
+  <span style={{ fontWeight: "bold", color: "red" }}>Sold Out</span>
+)}
+
             </div>
           ))}
         </div>
