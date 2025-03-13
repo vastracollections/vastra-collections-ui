@@ -72,16 +72,23 @@ const PopularCategories = () => {
       <div className="page-container">
         {/* Popular Categories Section */}
         <div className="container">
-          <h2 className="section-cat">Popular Categories</h2>
-          <div className="popular-categories">
-            {allCategoriesList.map((category, index) => (
-              <div key={index} className="category-card">
-                <img src={category?.imageUrl} height="20px" width="15px" alt={category.name} className="category-image" />
-                <div className="title">{category.name}</div>
-              </div>
-            ))}
-          </div>
-        </div>
+  <h2 className="section-cat">Popular Categories</h2>
+  <div className="popular-categories">
+    {allCategoriesList.slice(0, 8).map((category, index) => (
+      <div key={index} className="category-card">
+        <img 
+          src={category?.imageUrl} 
+          height="20px" 
+          width="15px" 
+          alt={category.name} 
+          className="category-image" 
+        />
+        <div className="title">{category.name}</div>
+      </div>
+    ))}
+  </div>
+</div>
+
   
         {/* Popular Products Section */}
         <h2 className="section-pro">Popular Products</h2>
