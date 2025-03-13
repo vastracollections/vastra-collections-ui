@@ -36,10 +36,10 @@ const Footers = () => {
         <div className="policies-section">
           <h4>Policies</h4>
           <ul>
-            <li><a href="/assets/policy-documents/Terms_and_Conditions.pdf" download="Terms_and_Conditions.pdf">Terms & Conditions</a></li>
-            <li><a href="/assets/policy-documents/Shipping_Policy.pdf" download="Shipping_Policy.pdf">Shipping</a></li>
-            <li><a href="/assets/policy-documents/Return_Policy.pdf" download="Return_Policy.pdf">Return</a></li>
-            <li><a href="/assets/policy-documents/Privacy_policy.pdf" download="Privacy_policy.pdf">Privacy Policy</a></li>
+            <li><a target="_blank" href="https://drive.google.com/file/d/1SFEb6_3Q4S3vffbg05PwZIDmZ-gvQ6IQ/view?usp=drive_link" download="Terms_and_Conditions.pdf">Terms & Conditions</a></li>
+            <li><a target="_blank" href="https://drive.google.com/file/d/1U7nyhHDX9-uUcT97HUltKz1KE7GhXb-P/view?usp=drive_link" download="Shipping_Policy.pdf">Shipping</a></li>
+            <li><a target="_blank" href="https://drive.google.com/file/d/1jG-9DF0DWbsg_Eyl_UQ3DtabYT1NYmGM/view?usp=drive_link" download="Return_Policy.pdf">Return</a></li>
+            <li><a target="_blank" href="https://drive.google.com/file/d/1vNv6xv3pag-9dES0N8Q3nQxP2g18-JLT/view?usp=sharing" download="Privacy_policy.pdf">Privacy Policy</a></li>
           </ul>
         </div>
 
