@@ -8,6 +8,7 @@ import PaymentSuccess from "./pages/Payment/PaymentSuccess";
 import CheckoutForm from "./pages/Checkout/CheckoutForm";
 import PlaceOrder from "./pages/Checkout/PlaceOrder";
 import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/react"
 //import PaymentOptions from "./pages/Checkout/PaymentOptions";
 
 
@@ -25,6 +26,7 @@ function App() {
        <Route path="/checkout" element={<CheckoutForm />} />
       </Routes>
       <Analytics />
+      <SpeedInsights/>
     </Router>
     
   );
