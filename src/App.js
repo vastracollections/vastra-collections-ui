@@ -8,7 +8,6 @@ import PaymentSuccess from "./pages/Payment/PaymentSuccess";
 import CheckoutForm from "./pages/Checkout/CheckoutForm";
 import PlaceOrder from "./pages/Checkout/PlaceOrder";
 //import PaymentOptions from "./pages/Checkout/PaymentOptions";
-import ConfirmPage from "./pages/Checkout/ConfirmPage";
 
 
 function App() {
@@ -22,7 +21,6 @@ function App() {
         <Route path="/Cart" element={<CartPage />} />
         <Route path="/PaymentSuccess" element={<PaymentSuccess />} />
         <Route  path="/place-order" element={<PlaceOrder />} />
-        <Route path="/ConfirmPayment" element={<ConfirmPage/>} />      
        <Route path="/checkout" element={<CheckoutForm />} />
       </Routes>
     </Router>
