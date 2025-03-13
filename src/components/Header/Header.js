@@ -24,7 +24,7 @@ const Header = () => {
 
   const fetchCategories = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/type/getHeaderContent");
+      const response = await axios.get("https://api.thevastracollections.com/type/getHeaderContent");
 
       if (response.data && typeof response.data === "object") {
         const formattedCategories = Object.entries(response.data).reduce((acc, [categoryType, items]) => {
