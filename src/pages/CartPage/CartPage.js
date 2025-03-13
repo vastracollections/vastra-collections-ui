@@ -127,46 +127,7 @@ const CartPage = () => {
           </Link> 
         </div>
       </div>
-      <div className="promo-container">
-        <div className="promo-box">
-          {/* Image Section */}
-             <div className="image-section">
-                <img src="https://i.pinimg.com/236x/e0/d3/df/e0d3df8eea55125dda908b0c59c9e456.jpg" alt="Saree 1" className="promo-image" />
-                <img src="https://i.pinimg.com/236x/f8/89/14/f889145d1b7b202adf21d8767bac8a31.jpg" alt="Saree 2" className="promo-image" />
-                <img src="https://i.pinimg.com/236x/a1/b4/83/a1b4831ff5b4c21e40a00f96ac021cb3.jpg" alt="Saree 3" className="promo-image" />
-              </div>
       
-              {/* Text Section */}
-              <div className="text-section">
-                <p className="new-arrival">New Arrival</p>
-                <h2 className="promo-title">
-                  Where Every Saree <br /> Tells a Story of <br /> Tradition and Grace
-                </h2>
-                <button className="shop-button">Shop Now</button>
-              </div>
-        </div>
-      </div>
-      {/* Newsletter & Instagram Section */}
-      <div className="newsletter-instagram-section">
-        <div className="newsletter-section">
-          <p>
-            Subscribe to <span className="highlight">our newsletter</span> and get
-            updates on <span className="highlight">new arrivals</span>
-          </p>
-          <div className="newsletter-form">
-            <input type="email" placeholder="your email address" />
-            <button className="subscribe-button">Subscribe</button>
-          </div>
-        </div>
-        <div className="instagram-section">
-          <p className="instagram-title">Follow us on Instagram</p>
-          <div className="instagram-images">
-            {/* {[1, 2, 3, 4].map((num) => (
-              <img key={num} src={`path/to/image${num}.jpg`} alt={`Saree ${num}`} />
-            ))} */}
-          </div>
-        </div>
-      </div>
       <Footer />
     </>
   );
